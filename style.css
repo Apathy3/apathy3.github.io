@@ -78,6 +78,8 @@ main {
 	object-fit: cover;
 	position: absolute;
 	z-index: -2;
+	transform: scale(1);
+	transition: .3s ease;
 	left: 0;
 	top: 0;
 }
@@ -98,6 +100,9 @@ main {
 }
 .project a:hover .link {
 	text-decoration: underline;
+}
+.project a:hover img {
+	transform: scale(1.1);
 }
 .project a:hover .text-wrap {
 	opacity: 1;
