@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="app">
+        <header>
+            <h2>Контакты</h2>
+            <ul>
+                <li v-for="contact in contacts" :key="contact.name" class="contact">
+                    <a :href="contact.val" :title="contact.name" target="_blank">
+                        <img :src=`./images/icons/${contact.name}.png` alt="" class="icon">
+                    </a>
+                </li>
+            </ul>
+            <p>{{projects.length}}</p>
+        </header>
+        <main>
+            <div class="content">
+                <ul class="projects">
+                    <li v-for="project in projects" :key="project.link" class="project">
+                        <a :href="project.link" target="_blank">
+                            <img :src="project.img" alt="">
+                            <div class="text-wrap">
+                                <div class="link">{{ project.link }}</div>
+                                <div class="name">{{ project.name }}</div>
+                                <div class="desc">{{ project.desc }}</div>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </main>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.6/dist/vue.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,133 @@
+html,
+body {
+	width: 100%;
+	max-width: 100%;
+	height: 100%;
+	font-family: "Roboto", sans-serif;
+}
+
+header {
+	height: 180px;
+	width: 100%;
+	background: rgb(70, 48, 121);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	flex-direction: column;
+	color: #ffffff;
+}
+header ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	align-items: center;
+}
+header li {
+}
+header li a{
+	padding: 15px;
+	transition: .3s ease;
+	
+}
+header li a:hover{
+	opacity: .6;
+}
+
+.content {
+	max-width: 1200px;
+	width: 100%;
+	margin: 0 auto;
+	padding: 0 15px;
+}
+
+main {
+	padding: 50px 0;
+}
+
+.projects {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+	justify-content: center;
+	grid-gap: 15px;
+}
+.project {
+	width: 100%;
+	height: 100%;
+}
+.project a {
+	width: 100%;
+	height: 100%;
+	border-radius: 5px;
+	overflow: hidden;
+	text-decoration: none;
+	color: #ffffff;
+	position: relative;
+	height: 250px;
+	display: block;
+}
+.project a img {
+	max-width: 100%;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	position: absolute;
+	z-index: -2;
+	left: 0;
+	top: 0;
+}
+.project a:before {
+	content: "";
+	width: 100%;
+	height: 100%;
+	background: rgb(0, 0, 0);
+	opacity: 0.3;
+	transition: 0.3s ease;
+	position: absolute;
+	z-index: -1;
+	left: 0;
+	top: 0;
+}
+.project a:hover:before {
+	opacity: 0.7;
+}
+.project a:hover .link {
+	text-decoration: underline;
+}
+.project a:hover .text-wrap {
+	opacity: 1;
+}
+
+.text-wrap {
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	justify-content: center;
+	transition: 0.3s ease;
+	padding: 20px;
+	text-align: center;
+}
+
+.name {
+	position: relative;
+	z-index: 2;
+	color: #ffffff;
+	font-size: 14px;
+	text-transform: uppercase;
+	font-weight: 600;
+	margin: 10px 0;
+}
+.desc {
+	position: relative;
+	z-index: 2;
+	color: #ffffff;
+	font-size: 12px;
+	font-weight: 300;
+}
